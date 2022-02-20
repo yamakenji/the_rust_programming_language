@@ -17,6 +17,9 @@
 		},
 		{
 			"path": "ch4_ownership"
+		},
+		{
+			"path": "ch4_references_and_borrowing"
 		}
 	],
 	"settings": {}

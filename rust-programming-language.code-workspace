@@ -20,6 +20,9 @@
 		},
 		{
 			"path": "ch4_references_and_borrowing"
+		},
+		{
+			"path": "ch5_struct"
 		}
 	],
 	"settings": {}

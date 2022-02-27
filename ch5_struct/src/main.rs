@@ -31,7 +31,4 @@ fn main() {
         username: String::from("anotherusername567"),
         ..user1
     };
-
-    
-
 }

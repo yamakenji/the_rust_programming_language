@@ -1,26 +1,27 @@
+mod front_of_house;
 // モジュールは、modキーワードを書き、次にモジュールの名前（今回の場合、front_of_house）を指定することで定義される
-mod front_of_house {
-    // モジュールの中には他のモジュールも置くことができる
-    pub mod hosting {
-        pub fn add_to_waitlist() {}
-        fn seat_at_table() {}
-    }
+// mod front_of_house {
+//     // モジュールの中には他のモジュールも置くことができる
+//     pub mod hosting {
+//         pub fn add_to_waitlist() {}
+//         fn seat_at_table() {}
+//     }
 
-    mod serving {
-        fn take_order() {}
-        fn serve_order() {}
-        fn take_payment() {}
+//     mod serving {
+//         fn take_order() {}
+//         fn serve_order() {}
+//         fn take_payment() {}
 
-        // mod back_of_house {
-        //     fn fix_incorrect_order() {
-        //         cook_order();
-        //         super::serve_order();
-        //     }
+//         // mod back_of_house {
+//         //     fn fix_incorrect_order() {
+//         //         cook_order();
+//         //         super::serve_order();
+//         //     }
 
-        //     fn cook_order() {}
-        // }
-    }
-}
+//         //     fn cook_order() {}
+//         // }
+//     }
+// }
 
 // 構造体とenumを公開する
 mod back_of_house {
@@ -44,12 +45,24 @@ mod back_of_house {
     }
 }
 
+// useを使ってクレートルートに追加
+// use crate::front_of_house::hosting;
+// useと相対パスで要素をスコープに持ち込む
+// pub useを使うことで外部のコードがhosting::add_to_waitlistを使ってadd_to_waitlistを使えるようになる
+//  => 再公開
+pub use self::front_of_house::hosting;
+
 pub fn eat_at_restaurant() {
     // 絶対パス
-    crate::front_of_house::hosting::add_to_waitlist();
+    // crate::front_of_house::hosting::add_to_waitlist();
+    // useキーワードを使う
+    // hosting(親モジュール)を指定することが慣例的
+    hosting::add_to_waitlist();
 
     // 相対パス
-    front_of_house::hosting::add_to_waitlist();
+    // front_of_house::hosting::add_to_waitlist();
+    // useキーワードを使う
+    hosting::add_to_waitlist();
 
     // Order a breakfast in the summer with Rye toast
     let mut meal = back_of_house::Breakfast::summer("Rye");
@@ -72,3 +85,9 @@ pub fn eat_at_restaurant() {
 //         assert_eq!(result, 4);
 //     }
 // }
+
+// use std::fmt;
+// use std::io;
+
+// fn function1() -> fmt::Result {}
+// fn function2() -> io::Result<()> {}

@@ -1,4 +1,6 @@
-# [The Rust Programming Language](https://doc.rust-jp.rs/book-ja/title-page.html)
+# The Rust Programming Languageを読む
+- [The Rust Programming Language 日本語版](https://doc.rust-jp.rs/book-ja/title-page.html)
+- [The Rust Programming Language](https://doc.rust-lang.org/book/)
 
 ## [6. Enumとパターンマッチング](https://doc.rust-jp.rs/book-ja/ch06-00-enums.html)
 
@@ -15,6 +17,6 @@
 - [x] [7.5 モジュールを複数のファイルに分割する](https://doc.rust-jp.rs/book-ja/ch07-05-separating-modules-into-different-files.html) 
 
 ## [8. 一般的なコレクション](https://doc.rust-jp.rs/book-ja/ch08-00-common-collections.html)
-- [ ] [8.1. ベクタで値のリストを保持する](https://doc.rust-jp.rs/book-ja/ch08-01-vectors.html)
+- [x] [8.1. ベクタで値のリストを保持する](https://doc.rust-jp.rs/book-ja/ch08-01-vectors.html)
 - [ ] [8.2. 文字列でUTF-8でエンコードされたテキストを保持する](https://doc.rust-jp.rs/book-ja/ch08-02-strings.html)
 - [ ] [8.3. キーとそれに紐づいた値をハッシュマップに格納する](https://doc.rust-jp.rs/book-ja/ch08-03-hash-maps.html)

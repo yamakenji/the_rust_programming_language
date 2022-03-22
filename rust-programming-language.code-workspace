@@ -23,6 +23,9 @@
 		},
 		{
 			"path": "ch5_struct"
+		},
+		{
+			"path": "ch8_vector"
 		}
 	],
 	"settings": {}
